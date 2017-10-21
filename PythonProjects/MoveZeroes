@@ -1,0 +1,19 @@
+class Solution(object):
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        first_zero = 0  # records the position of "0"
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[first_zero], nums[i] = nums[i], nums[first_zero] #swap, note expression, order doesn't matter
+                first_zero += 1
+            print(nums)
+
+
+#arr = [0, 0, 1]
+arr =  [1, 0, 0, 3, 2, 0]
+    # #[1, 0, 3, 2, 0]
+ans = Solution()
+ans.moveZeroes(arr)
